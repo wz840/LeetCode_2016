@@ -15,28 +15,22 @@ public class Solution {
                 return removeOnlyTail(n,val);
             } else {
                 while(n.next!=null) {
-                    // System.out.println("head: " + head.val);
-                    // System.out.println("n: " + n.val);
                     if (n.val==val){
-                        if (n.next.next!=null) {
+                       // if (n.next.next!=null) {
                             n.val = n.next.val;
                             n.next = n.next.next;
-                        } else {
-                            n.val = n.next.val;
-                            n.next = null;
-                        }
+                        // } else {
+                        //     n.val = n.next.val;
+                        //     n.next = null;
+                        // }
                     } else {
                         n = n.next;
                     }
                 }
-                //System.out.println(n.val);
-                //System.out.println("head.next: " + head.next.val);
 
                 if (n.val==val) {
                     return removeTail(head,n,val);
                 }
-                // System.out.println(head.next==null);
-                // System.out.println(n==null);
                 return head;
             }   
         }
