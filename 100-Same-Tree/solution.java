@@ -17,14 +17,14 @@ public class Solution {
             ls1.add(p.val);
             ls2.add(q.val);
             dfs(p, ls1);
-            //int[] pArr = listToArray(ls1);
+            Integer[] pArr = listToArray(ls1);
             dfs(q, ls2);
-            //int[] qArr = listToArray(ls2);
-           // System.out.println(Arrays.toString(pArr));
-           // System.out.println(Arrays.toString(qArr));
+            Integer[] qArr = listToArray(ls2);
+            System.out.println(Arrays.toString(pArr));
+            System.out.println(Arrays.toString(qArr));
 
             
-            return ls1.equals(ls2);
+            return Arrays.equals(pArr,qArr);
         } else if (p==null && q==null) return true;
         else return false;
         
@@ -48,10 +48,10 @@ public class Solution {
         }
     }
     
-    public int[] listToArray(List<Integer> ls) {
-        int[] arr = new int[ls.size()];
+    public Integer[] listToArray(List<Integer> ls) {
+        Integer[] arr = new Integer[ls.size()];
         for (int i=0; i<ls.size(); i++) {
-            arr[i] = ls.get(i).intValue();
+            arr[i] = ls.get(i);
         }
         return arr;
     }
