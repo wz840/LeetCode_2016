@@ -1,4 +1,5 @@
 public class Solution {
+    
     private int zeroCounter = 0;
     private int zeroIndex = -1;
     
@@ -32,9 +33,6 @@ public class Solution {
             } else product[0] = product[0] * nums[i];
         }
         if (zeroCounter==1) {
-            // for (int i=0; i<zeroIndex; i++) {
-            //     product[1] = product[1]*nums[i];
-            // }
             for (int i=zeroIndex+1; i<nums.length; i++) {
                 product[1] = product[1]*nums[i];
             }
