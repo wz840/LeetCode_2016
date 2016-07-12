@@ -29,7 +29,6 @@ public class Solution {
                 product[0] = 0;
                 zeroCounter++;
                 zeroIndex = i;
-                break;
             } else product[0] = product[0] * nums[i];
         }
         if (zeroCounter==1) {
