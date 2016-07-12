@@ -24,6 +24,7 @@ public class Solution {
         product[1] = 1;
         for (int i=0; i<nums.length; i++) {
             if (nums[i]==0) {
+                product[1] = product[0];
                 product[0] = 0;
                 zeroCounter++;
                 zeroIndex = i;
@@ -31,9 +32,9 @@ public class Solution {
             } else product[0] = product[0] * nums[i];
         }
         if (zeroCounter==1) {
-            for (int i=0; i<zeroIndex; i++) {
-                product[1] = product[1]*nums[i];
-            }
+            // for (int i=0; i<zeroIndex; i++) {
+            //     product[1] = product[1]*nums[i];
+            // }
             for (int i=zeroIndex+1; i<nums.length; i++) {
                 product[1] = product[1]*nums[i];
             }
