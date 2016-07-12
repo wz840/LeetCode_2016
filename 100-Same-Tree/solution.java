@@ -23,7 +23,6 @@ public class Solution {
         else return false;
     }
     
-    
     public void dfs(TreeNode p, List<Integer> ls) {
         if (p.left!=null || p.right!=null){
             if (p.left!=null) ls.add(p.left.val);
@@ -31,19 +30,11 @@ public class Solution {
             if (p.right!=null) ls.add(p.right.val);
             else ls.add(null);
         }
-        if (p.left!=null) {
+        if (p.left!=null) { 
             dfs(p.left, ls);
         }
         if (p.right!=null) {
             dfs(p.right, ls);
         }
     }
-    
-    // public Integer[] listToArray(List<Integer> ls) {
-    //     Integer[] arr = new Integer[ls.size()];
-    //     for (int i=0; i<ls.size(); i++) {
-    //         arr[i] = ls.get(i);
-    //     }
-    //     return arr;
-    // }
 }
