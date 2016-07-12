@@ -15,14 +15,8 @@ public class Solution {
                     else output[i] = 0;
                 } else output[i] = product[0] / nums[i];
             }
-            return output;
-        } else return output;
-    }
-  
-    public void swap(int[] nums, int i, int j) {
-        int temp = nums[j];
-        nums[j] = nums[i];
-        nums[i] = temp;
+        }
+        return output;
     }
     
     public void calProduct(int[] nums, int[] product) {
