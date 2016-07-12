@@ -33,20 +33,10 @@ public class Solution {
         node.next = node.next.next;
     }
     
-    public boolean isOnlyTail(ListNode node, ListNode head) {
-        return (node.next==null && node==head);
-    }
-    
-    
-    public ListNode removeOnlyTail(ListNode tail, int val) {
-        if (tail.val!=val) return tail;
-        else return null;
-    }
-    
     public ListNode removeTail(ListNode head, ListNode tail){
         ListNode n = head;
         if (n.next!=null){
-            while(n.next!=tail){
+            while(n.next!=tail) {
                 n = n.next;
             }
             n.next = null;
