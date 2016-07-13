@@ -1,7 +1,7 @@
 public class Solution {
     public int maxProfit(int[] prices) {
         int profit = 0;
-        int i = 0;
+        //int i = 0;
         if (prices.length==0) return 0;
         else {
             /*int valley = prices[0];
@@ -17,18 +17,10 @@ public class Solution {
                 peak = prices[i];
                 profit += peak - valley;
             }*/
-            int valley = prices[0];
-            int peak = prices[0];
-            while (i<prices.length-1) {
-                while (i<prices.length-1 && prices[i]>=prices[i+1]) {
-                    i++;
+            for (int i=1; i<prices.length; i++) {
+                if (prices[i]>prices[i-1]) {
+                    profit += prices[i] - prices[i-1];
                 }
-                valley = prices[i];
-                while (i<prices.length-1 && prices[i]<prices[i+1]) {
-                    i++;
-                }
-                peak = prices[i];
-                profit += peak - valley; 
             }
             
             
