@@ -4,7 +4,7 @@ public class Solution {
         int i = 0;
         if (prices.length==0) return 0;
         else {
-            int valley = prices[0];
+            /*int valley = prices[0];
             int peak = prices[0];
             while (i<prices.length-1) {
                 while (i<prices.length-1 && prices[i]>=prices[i+1]) {
@@ -16,7 +16,24 @@ public class Solution {
                 }
                 peak = prices[i];
                 profit += peak - valley;
+            }*/
+            int valley = prices[0];
+            int peak = prices[0];
+            while (i<prices.length-1) {
+                while (i<prices.length-1 && prices[i]>=prices[i+1]) {
+                    i++;
+                }
+                valley = prices[i];
+                while (i<prices.length-1 && prices[i]<prices[i+1]) {
+                    i++;
+                }
+                peak = prices[i];
+                profit += peak - valley; 
             }
+            
+            
+            
+            
             return profit;
         }
     }
