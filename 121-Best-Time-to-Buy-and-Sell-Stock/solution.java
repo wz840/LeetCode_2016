@@ -15,19 +15,12 @@ public class Solution {
                     valley = prices[i];
                     peak = valley;
                 }
-                System.out.println("Valley: " + valley);
                 while (i<prices.length-1 && prices[i]<prices[i+1]) {
                     i++;
                 }
                 peak = (prices[i]>peak)?prices[i]:peak;
-                System.out.println("Peak: " + peak);
-
                 profit = peak- valley;
-                System.out.println("Profit: " + profit);
-                System.out.println("-----------------------");
-
                 mp = (profit>mp)?profit:mp;
-                
             }
             return mp;
         }
