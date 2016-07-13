@@ -22,10 +22,6 @@ public class Solution {
                     profit += prices[i] - prices[i-1];
                 }
             }
-            
-            
-            
-            
             return profit;
         }
     }
