@@ -19,11 +19,6 @@ public class Solution {
                 else hmt.put(key,Integer.valueOf(1));
             }
             return hms.equals(hmt);
-            // Iterator<Integer> o = hm.values().iterator();
-            // while(o.hasNext()) {
-            //     if (o.next().intValue()%2!=0) return false;
-            // }
-            // return true;
         }
     }
 }
