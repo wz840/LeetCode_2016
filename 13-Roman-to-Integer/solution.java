@@ -1,6 +1,5 @@
 public class Solution {
     public int romanToInt(String s) {
-        //s = s.toLowerCase();
         int sum = 0;
         int temp = 0;
         int current = 0;
@@ -20,13 +19,10 @@ public class Solution {
                 }
                 else {
                     sum = temp + current - pre;
-                    
                 }
             }
         }
         return sum;
-        
-        
     }
     
     public int singleRomanToInt(char c) {
