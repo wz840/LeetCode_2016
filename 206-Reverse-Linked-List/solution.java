@@ -10,20 +10,7 @@ public class Solution {
     public ListNode reverseList(ListNode head) {
         if (head==null) return null;
         else {
-            /*ListNode temp = new ListNode(0);
-            Stack<ListNode> st = new Stack<ListNode>();
-            while (head.next!=null) {
-                st.push(head);
-                head = head.next;
-            }
-            temp = head;
-            while(!st.empty()) {
-                temp.next = st.pop();
-                temp = temp.next;
-            }
-            return head;*/
             Stack<Integer> st = new Stack<Integer>();
-            //List<Integer> values = new ArrayList<Integer>();
             ListNode temp = new ListNode(0);
             temp = head;
             while (head!=null) {
@@ -36,9 +23,6 @@ public class Solution {
                 head = head.next;
             }
             return temp;
-            
-            
-            
         }
     }
 }
