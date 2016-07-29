@@ -8,13 +8,11 @@
  * }
  */
 public class Solution {
-    private int max;
     private List<Integer> ls = new ArrayList<Integer>();
     public int kthSmallest(TreeNode root, int k) {
         preorderTraversal(root);
         int min = ls.get(k-1).intValue();
         return min;
-        
     }
     
     public void preorderTraversal(TreeNode root) {
