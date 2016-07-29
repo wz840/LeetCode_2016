@@ -27,7 +27,6 @@ public class Solution {
             }
             insertTail(node, tail);
             tail = tail.next;
-            //i += 2;
             if ((i+=2)>size) break;
             head = head.next;
             
