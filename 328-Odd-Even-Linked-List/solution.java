@@ -9,7 +9,6 @@
 public class Solution {
     public ListNode oddEvenList(ListNode head) {
         ListNode tail = head;
-        ListNode dup = head;
         ListNode temp = head;
         int size = 1;
         int i = 2;
@@ -41,7 +40,6 @@ public class Solution {
     }
     
     public ListNode removeNode(ListNode node) {
-        
         int tempVal = node.val;
         node.val = node.next.val;
         node.next.val = tempVal;
