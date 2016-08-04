@@ -5,10 +5,8 @@ public class Solution {
             int bits = 0;
             for (int j=0; j<nums.length; j++) {
                 bits += (nums[j] >> i) & 1;
-                
             }
             num = num | (bits%3 << i);
-            
         }
         return num;
     }
