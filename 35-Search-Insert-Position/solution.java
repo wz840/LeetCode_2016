@@ -15,8 +15,5 @@ public class Solution {
         } else {
             return searchInsert(left, target);
         }
-        
-        
-        
     }
 }
