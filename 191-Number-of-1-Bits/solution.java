@@ -1,14 +1,14 @@
 public class Solution {
     // you need to treat n as an unsigned value
     public int hammingWeight(int n) {
-        /*int num = 0;
+        int num = 0;
         for (int i=0; i<32; i++) {
             if(((n>>i)&1)==1) num++;
         }
-        return num;*/
+        return num;
         
-        String str = Integer.toBinaryString(n);
+        /*String str = Integer.toBinaryString(n);
         String s = str.replaceAll("1","");
-        return (str.length()-s.length());
+        return (str.length()-s.length());*/
     }
 }
