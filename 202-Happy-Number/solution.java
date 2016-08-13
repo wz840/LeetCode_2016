@@ -11,11 +11,7 @@ public class Solution {
             }
             if (squareSum==1) return true;
             else n = squareSum;
-            
-            
-            
         }
         return false;
-        
     }
 }
