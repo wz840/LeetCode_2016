@@ -12,7 +12,6 @@ public class Solution {
         
         if (head==null) return null;
         if (head.next==null) return head;
-        int temp = Integer.MIN_VALUE;
         ListNode sentinel = head;
         while (sentinel.next!=null) {
             if (sentinel.val==sentinel.next.val) {
@@ -21,16 +20,12 @@ public class Solution {
                     break;
                 }
             } else {
-                
-                temp = sentinel.val;
                 if (sentinel.next!=null) sentinel = sentinel.next;
                 else break;
             }
-            
         }
         return head;
     }
-    
     
     public ListNode remove(ListNode head) {
         if (head.next!=null) {
