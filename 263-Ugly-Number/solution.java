@@ -3,13 +3,13 @@ public class Solution {
         if (num==0) return false;
         if (num==1) return true;
         if (num%2==0){
-            return isUgly((int)num/2);
+            return isUgly(num/2);
         }
         if (num%3==0){
-            return isUgly((int)num/3);
+            return isUgly(num/3);
         }
         if (num%5==0){
-            return isUgly((int)num/5);
+            return isUgly(num/5);
         }
         return false;
     }
