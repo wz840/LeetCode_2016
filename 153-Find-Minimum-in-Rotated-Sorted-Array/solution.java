@@ -14,16 +14,12 @@ public class Solution {
                 break;
             }
         }
+        int index = (nums[index1]<nums[(index2+1)%nums.length])?index1:((index2+1)%nums.length);
         if (nums.length%2!=0 && index1==nums.length/2) {
             if (nums[index1]<=nums[index1+1] && nums[index1]<=nums[index1-1]) return nums[index1];
-            else {
-                int index = (nums[index1]<nums[(index2+1)%nums.length])?index1:((index2+1)%nums.length);
-                return nums[index];
-            }
-        } else {
-            int index = (nums[index1]<nums[(index2+1)%nums.length])?index1:((index2+1)%nums.length);
-            return nums[index];
-        }
+            else return nums[index];
+        } else return nums[index];
+        
 
         
         
