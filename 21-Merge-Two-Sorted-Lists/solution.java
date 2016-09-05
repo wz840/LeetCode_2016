@@ -13,7 +13,7 @@ public class Solution {
         if (l1!=null && l2==null) return l1;
         if (l1==null && l2==null) return null;
         
-        List<ListNode> ls = new ArrayList<ListNode>();
+        /*List<ListNode> ls = new ArrayList<ListNode>();
         while (l1!=null && l2!=null) {
             if (l1.val<=l2.val) {
                 ls.add(l1);
@@ -35,7 +35,36 @@ public class Solution {
         if (l1==null) head.next = l2;
         else head.next = l1;
         
+        return first;*/
+        ListNode head = null;
+        if (l1.val<=l2.val) {
+            head = new ListNode(l1.val);
+            l1 = l1.next;
+        } else {
+            head = new ListNode(l2.val);
+            l2 = l2.next;
+        }
+        ListNode first = head;
+        
+        while (l1!=null && l2!=null) {
+            if (l1.val<=l2.val) {
+                head.next = l1;
+                l1 = l1.next;
+            } else {
+                head.next = l2;
+                l2 = l2.next;
+            }
+            head = head.next;
+        }
+        
+
+        if (l1==null) head.next = l2;
+        else head.next = l1;
+        
         return first;
+        
+        
+        
         
     }
 }
