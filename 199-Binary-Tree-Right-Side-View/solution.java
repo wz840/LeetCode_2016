@@ -13,28 +13,11 @@ public class Solution {
     List<Integer> ls = new ArrayList<Integer>();
     
     public List<Integer> rightSideView(TreeNode root) {
-        
-       /* List<Integer> ls = new ArrayList<Integer>();
+       
         if (root==null) return ls;
-        ls.add(root.val);
-        
-        while (hasChild(root)) {
-            if (root.right!=null) {
-                ls.add(root.right.val);
-                root = root.right;
-            } else if (root.right==null && root.left!=null) {
-                ls.add(root.left.val);
-                root = root.left;
-            }
-            
-        }
-        return ls;*/
-        if (root==null) return ls;
-        if (ls.size()==depth) {
-            ls.add(root.val);
-            
-        }
+        if (ls.size()==depth) ls.add(root.val);
         if (childStatus(root)!="NONE") depth++;
+        
         if (childStatus(root)=="BOTH") {
             int localDepth = depth;
             System.out.println("localDepth    " + localDepth);
@@ -48,16 +31,18 @@ public class Solution {
 
             node = root.left;
             rightSideView(node);
-            
         }
+        
         if (childStatus(root)=="RIGHT") {
             TreeNode node = root.right;
             rightSideView(node);
         }
+        
         if (childStatus(root)=="LEFT") {
             TreeNode node = root.left;
             rightSideView(node);
         }
+        
         return ls;
 
         
