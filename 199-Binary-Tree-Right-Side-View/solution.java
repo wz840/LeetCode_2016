@@ -20,15 +20,9 @@ public class Solution {
         
         if (childStatus(root)=="BOTH") {
             int localDepth = depth;
-            System.out.println("localDepth    " + localDepth);
-
             TreeNode node = root.right;
             rightSideView(node);
-            System.out.println("right depth    " + depth);
-            
             depth = localDepth;
-            System.out.println("left depth    " + depth);
-
             node = root.left;
             rightSideView(node);
         }
