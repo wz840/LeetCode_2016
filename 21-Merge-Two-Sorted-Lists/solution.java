@@ -36,7 +36,9 @@ public class Solution {
         else head.next = l1;
         
         return first;*/
+        
         ListNode head = null;
+        
         if (l1.val<=l2.val) {
             head = new ListNode(l1.val);
             l1 = l1.next;
