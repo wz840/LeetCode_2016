@@ -36,5 +36,6 @@ public class Solution {
         else head.next = l1;
         
         return first;
+        
     }
 }
