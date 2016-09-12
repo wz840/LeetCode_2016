@@ -6,16 +6,14 @@ public class Solution {
         while(current!=target) {
             if (target>current){
                 i++;
-                if (i>matrix.length-1) break;
+                if (i>matrix.length-1) return false;
                 current = matrix[i][j];
             } else {
                 j--;
-                if (j<0) break;
+                if (j<0) return false;
                 current = matrix[i][j];
             }
         }
-        if (current==target) return true;
-        else return false;
-        
+        return true;
     }
 }
